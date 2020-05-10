@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Investment App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="wrapper">
+        <img src="" alt="">
+        <h1>Calculate Return on Investment for Residential Properties</h1>
+        <form class="form js-form" action="">
+            <label for="city">City</label><br>
+            <input name="city" class="city js-city" type="text"><br>
+            <label for="state">State</label><br>
+            <input name="state" class="state js-state" type="text"><br>
+            <label for="price">Price</label><br>
+            <input name="price" class="price js-price" type="text"><br>
+            <label for="required-roi">Required Return on Investment</label><br>
+            <input name="required-roi" class="required-roi js-required-roi" type="text"><br>
+            <label for="beds">Bedrooms</label><br>
+            <input name="beds" class="beds js-beds" type="text"><br>
+            <label for="baths">Bathrooms</label><br>
+            <input name="baths" class="baths js-baths" type="text"><br>
+            <label for="sqft">Square Feet</label><br>
+            <input name="sqft" class="sqft js-sqft" type="text"><br>
+            <label for="results">Max. Results</label><br>
+            <input name="results" class="results js-results" type="text"><br>
+            <button class="submit js-submit" type="submit">Submit</button>
+        </form>
+        <h2 class="error-msg js-error-msg"></h2>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
