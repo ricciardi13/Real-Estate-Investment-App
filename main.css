@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+#wrapper-start {
+    max-width: 1440px;
+    margin: 0 auto;
+    background:
+        linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+        linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color:#708090;
+    background-size: 64px 128px;
+}    
+
+#wrapper-start .image {
+    background-image: url("/assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+ h1, h2 {
+    text-align: center;
+    font-size: 20pt;
+    display: block;
+    color: white;
+    text-shadow: 2px 4px 8px black ;
+    margin: 0;
+    padding: 20px;
+}
+
+#wrapper-start .form {
+    max-width: 275px;
+    margin: 0 auto 40px;
+    background-color: white;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#wrapper-start .form fieldset {
+    border: none;
+}
+
+#wrapper-start .form fieldset input, label {
+    margin: 8px 0;
+    padding: 0;   
+    display: inline-block;
+    width: 120px;    
+}
+
+#wrapper-start .form label {
+    text-align: right;
+    padding-right: 20px;
+
+}
+
+#wrapper-start .submit {
+    display: block;
+    margin: 0 auto 12px;
+}
+
+#wrapper-results {
+    background:
+        linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+        linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color:#708090;
+    background-size: 64px 128px;
+}
+
+#wrapper-results h3 {
+    padding: 0 20px;
+}
+
+#wrapper-results .result {
+    width: 400px;
+    display: block;
+    margin: 20px auto;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#wrapper-results .result p {
+    padding: 12px;
+}
+
+#wrapper-results img {
+    max-width: 400px;
+}
+
+.new-search {
+    margin: 0 auto 16px;
+    display: block;
+}
+
+.note {
+    background-color: gray;
+    padding: 10px;
+}

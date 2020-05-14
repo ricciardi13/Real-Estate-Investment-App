@@ -4,33 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Investment App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div id="wrapper">
-        <img src="" alt="">
+    <div id="wrapper-start">
+        <div class="image"></div>
         <h1>Calculate Return on Investment for Residential Properties</h1>
         <form class="form js-form" action="">
-            <label for="city">City</label><br>
-            <input name="city" class="city js-city" type="text"><br>
-            <label for="state">State</label><br>
-            <input name="state" class="state js-state" type="text"><br>
-            <label for="price">Price</label><br>
-            <input name="price" class="price js-price" type="text"><br>
-            <label for="required-roi">Required Return on Investment</label><br>
-            <input name="required-roi" class="required-roi js-required-roi" type="text"><br>
-            <label for="beds">Bedrooms</label><br>
-            <input name="beds" class="beds js-beds" type="text"><br>
-            <label for="baths">Bathrooms</label><br>
-            <input name="baths" class="baths js-baths" type="text"><br>
-            <label for="sqft">Square Feet</label><br>
-            <input name="sqft" class="sqft js-sqft" type="text"><br>
-            <label for="results">Max. Results</label><br>
-            <input name="results" class="results js-results" type="text"><br>
+            <fieldset>
+            <label for="city" class="city-label">City</label>
+            <input name="city" class="city js-city" type="text">
+            <label for="state">State</label>
+            <input name="state" class="state js-state" type="text">
+            <label for="price">Price</label>
+            <input name="price" class="price js-price" type="text">
+            <label for="sqft">Square Feet</label>
+            <input name="sqft" class="sqft js-sqft" type="text">
+            <label for="beds">Bedrooms</label>
+            <input name="beds" class="beds js-beds" type="text">
+            <label for="baths">Bathrooms</label>
+            <input name="baths" class="baths js-baths" type="text">
+            <label for="results">Max. Results</label>
+            <input name="results" class="results js-results" type="text">
+            </fieldset>
             <button class="submit js-submit" type="submit">Submit</button>
         </form>
         <h2 class="error-msg js-error-msg"></h2>
-        <section class="results js-results">                        
+        
+    </div>
+    <div id="wrapper-results">
+        <h2>Results</h2>
+        <section class="results js-results">
+            <section class="result js-result">    
+            </section>                        
+        </section>
+        <section>
+            <button class="new-search js-new-search">New Search</button>
+        </section>
+        <section class="note">
+            <p>Note:</p>
         </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>

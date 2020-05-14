@@ -66,6 +66,7 @@ function getRentalInfo(responseJson){
       })
       .then(responseJson => displayRentalInfo(responseJson, searchResults))
       .catch(err => {
+        $(".js-error-msg").show();
         $('.js-error-msg').text(`Something went wrong: ${err.message}`);
       });
     }
@@ -74,16 +75,29 @@ function getRentalInfo(responseJson){
 function displayRentalInfo(responseJson, searchResults){
     console.log(responseJson);
     console.log(searchResults);
+    $("#wrapper-start").hide();
+    $("#wrapper-results").show();
     $(".js-results").append(`<h3>Result ${properties + 1}</h3>`);
     $(".js-results").append(`
       <section class="result js-result">
+        <img src="${searchResults.properties[properties].thumbnail}" alt="${searchResults.properties[properties].address.line}">
         <p>Address: ${searchResults.properties[properties].address.line}</p>
-        <p>Price: ${searchResults.properties[properties].price}</p>
-        <p>Projected Monthly Rental Income: ${responseJson.rent}</p>
+        <p>Price: $${searchResults.properties[properties].price}</p>
+        <p>Projected Monthly Rental Income: $${responseJson.rent}</p>
         <p>Projected Rate of Return: ${calculateRate(searchResults.properties[properties].price, responseJson.rent)}%</p>    
+        <p><a href="${searchResults.properties[properties].rdc_web_url}">Learn more.</a></p>
       </section>`);
-      properties++;  
+      properties++;
+      $("#wrapper-results").on("click", ".js-new-search", function(){
+        newSearch();
+      });  
         
+}
+
+function newSearch(){
+  $("#wrapper-start").show();
+  properties = 0;
+  watch();
 }
 
 function calculateRate(value, rent){
@@ -91,9 +105,22 @@ function calculateRate(value, rent){
   return ((rent * MONTHS_IN_YEAR) / value);
 }
 
+function clearInputs(){
+  $(".js-city").val("");
+  $(".js-state").val("");
+  $(".js-price").val("");
+  $(".js-beds").val("");
+  $(".js-baths").val("");
+  $(".js-sqft").val("");
+  $(".js-results").val("");
+  $(".js-error-message").html("");
+}
+
 function watch(){
+    $(".js-error-msg").hide();
+    $("#wrapper-results").hide();
+    clearInputs();
     $(".js-form").submit(function(e){
-      $(".js-results").empty();
       e.preventDefault();
       console.log("Watching");
       validateInputs();
