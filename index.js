@@ -74,7 +74,7 @@ function displayRentalInfo(responseJson, searchResults){
         <p>Price: $${searchResults.properties[properties].price}</p>
         <p>Projected Monthly Rental Income: $${responseJson.rent}</p>
         <p>Projected Rate of Return: ${calculateRate(searchResults.properties[properties].price, responseJson.rent)}%</p>    
-        <p><a href="${searchResults.properties[properties].rdc_web_url}">Learn more.</a></p>
+        <p><a href="${searchResults.properties[properties].rdc_web_url}" target="_blank">Learn more.</a></p>
       </section>`);
       properties++;
       $("#wrapper-results").on("click", ".js-new-search", function(){
