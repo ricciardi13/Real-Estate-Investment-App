@@ -19,7 +19,7 @@ body {
 }    
 
 #wrapper-start .image {
-    background-image: url("/assets/hero.jpg");
+    background-image: url("https://raw.githubusercontent.com/ricciardi13/Real-Estate-Investment-App/master/assets/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
