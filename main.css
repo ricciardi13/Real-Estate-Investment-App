@@ -9,6 +9,7 @@ body {
 
 #wrapper-start {
     max-width: 1440px;
+    height: 960px;
     margin: 0 auto;
     background:
         linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
@@ -46,7 +47,7 @@ body {
     border: none;
 }
 
-#wrapper-start .form fieldset input, label {
+#wrapper-start .form fieldset input, label, select {
     margin: 8px 0;
     padding: 0;   
     display: inline-block;
@@ -61,7 +62,7 @@ body {
 
 #wrapper-start .submit {
     display: block;
-    margin: 0 auto 12px;
+    margin: 0 auto 20px;
 }
 
 #wrapper-results {
@@ -89,7 +90,10 @@ body {
 }
 
 #wrapper-results img {
+    display: block;
+    margin: 0 auto;
     max-width: 400px;
+
 }
 
 .new-search {
@@ -98,6 +102,6 @@ body {
 }
 
 .note {
-    background-color: gray;
+    background-color: lightgray;
     padding: 10px;
 }

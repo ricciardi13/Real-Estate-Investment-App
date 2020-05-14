@@ -11,22 +11,74 @@
     <div id="wrapper-start">
         <div class="image"></div>
         <h1>Calculate Return on Investment for Residential Properties</h1>
-        <form class="form js-form" action="">
+        <form class="form js-form" action="#">
             <fieldset>
             <label for="city" class="city-label">City</label>
-            <input name="city" class="city js-city" type="text">
+            <input id="city" class="city js-city" type="text">
             <label for="state">State</label>
-            <input name="state" class="state js-state" type="text">
-            <label for="price">Price</label>
-            <input name="price" class="price js-price" type="text">
+            <select class="state js-state" id="state">
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select>
+            <label for="price">Max. Price</label>
+            <input id="price" class="price js-price" min="0" type="number">
             <label for="sqft">Square Feet</label>
-            <input name="sqft" class="sqft js-sqft" type="text">
+            <input id="sqft" class="sqft js-sqft" min="0" type="number">
             <label for="beds">Bedrooms</label>
-            <input name="beds" class="beds js-beds" type="text">
+            <input id="beds" class="beds js-beds" min="1" type="number">
             <label for="baths">Bathrooms</label>
-            <input name="baths" class="baths js-baths" type="text">
+            <input id="baths" class="baths js-baths" min="1" type="number">
             <label for="results">Max. Results</label>
-            <input name="results" class="results js-results" type="text">
+            <input id="results" class="results js-results" type="number" min="1" max="3">
             </fieldset>
             <button class="submit js-submit" type="submit">Submit</button>
         </form>
@@ -42,9 +94,9 @@
         <section>
             <button class="new-search js-new-search">New Search</button>
         </section>
-        <section class="note">
-            <p>Note:</p>
-        </section>
+        <!-- <section class="note">
+            <p>Note: This application is meant for</p>
+        </section> -->
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>

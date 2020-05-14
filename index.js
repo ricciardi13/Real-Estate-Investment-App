@@ -2,11 +2,6 @@
 
 let properties = 0;
 
-function validateInputs(){
-    console.log("Validating");
-
-}
-
 function getListings(){
     properties = 0;
     let inputs = {
@@ -22,7 +17,6 @@ function getListings(){
 }
 
 function getResponse(inputs){
-    console.log(inputs);
     $(".js-results").empty();    
     const url = `https://realtor.p.rapidapi.com/properties/v2/list-for-sale?beds_min=${inputs.beds}&sort=relevance&baths_min=${inputs.baths}&price_max=${inputs.price}&sqft_min=${inputs.sqft}&city=${inputs.city}&limit=${inputs.results}&offset=0&state_code=${inputs.state}`;
     fetch(url, {
@@ -45,12 +39,9 @@ function getResponse(inputs){
 }
 
 function getRentalInfo(responseJson){
-    console.log(responseJson);
-    console.log(responseJson.properties[0].address.line);
     let searchResults = responseJson;
     for (let i = 0; i < responseJson.properties.length; i++){
       const url = `https://realtymole-rental-estimate-v1.p.rapidapi.com/rentalPrice?address=${responseJson.properties[i].address.line.split(" ").join("%20")}%20${responseJson.properties[i].address.city.split(" ").join("%20")}%20${responseJson.properties[i].address.state_code}&bedrooms=${responseJson.properties[i].beds}&bathrooms=${responseJson.properties[i].baths}&squareFootage=${responseJson.properties[i].building_size.size}`;
-      console.log(url);
       fetch(url, {
       "method": "GET",
     	"headers": {
@@ -73,8 +64,6 @@ function getRentalInfo(responseJson){
 }
 
 function displayRentalInfo(responseJson, searchResults){
-    console.log(responseJson);
-    console.log(searchResults);
     $("#wrapper-start").hide();
     $("#wrapper-results").show();
     $(".js-results").append(`<h3>Result ${properties + 1}</h3>`);
@@ -102,7 +91,7 @@ function newSearch(){
 
 function calculateRate(value, rent){
   const MONTHS_IN_YEAR = 12;
-  return ((rent * MONTHS_IN_YEAR) / value);
+  return (((rent * MONTHS_IN_YEAR) / value)*100);
 }
 
 function clearInputs(){
@@ -123,7 +112,6 @@ function watch(){
     $(".js-form").submit(function(e){
       e.preventDefault();
       console.log("Watching");
-      validateInputs();
       getListings();
     });
 }
