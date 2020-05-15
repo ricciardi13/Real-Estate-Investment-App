@@ -13,10 +13,10 @@
         <h1>Calculate Return on Investment for Residential Properties</h1>
         <form class="form js-form" action="#">
             <fieldset>
-            <label for="city" class="city-label">City</label>
-            <input id="city" class="city js-city" type="text">
-            <label for="state">State</label>
-            <select class="state js-state" id="state">
+            <label for="city" class="city-label">City*</label>
+            <input id="city" class="city js-city" required type="text">
+            <label for="state">State*</label>
+            <select class="state js-state" required id="state">
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -69,7 +69,7 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
             </select>
-            <label for="price">Max. Price</label>
+            <label for="price">Max Price</label>
             <input id="price" class="price js-price" min="0" type="number">
             <label for="sqft">Square Feet</label>
             <input id="sqft" class="sqft js-sqft" min="0" type="number">
@@ -77,8 +77,8 @@
             <input id="beds" class="beds js-beds" min="1" type="number">
             <label for="baths">Bathrooms</label>
             <input id="baths" class="baths js-baths" min="1" type="number">
-            <label for="results">Max. Results</label>
-            <input id="results" class="results js-results" type="number" min="1" max="3">
+            <label for="results">Max Results*</label>
+            <input id="results" class="results js-results" required type="number" min="1" max="3">
             </fieldset>
             <button class="submit js-submit" type="submit">Submit</button>
         </form>
@@ -94,9 +94,6 @@
         <section>
             <button class="new-search js-new-search">New Search</button>
         </section>
-        <!-- <section class="note">
-            <p>Note: This application is meant for</p>
-        </section> -->
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>

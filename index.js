@@ -94,7 +94,7 @@ function calculateRate(value, rent){
   return (((rent * MONTHS_IN_YEAR) / value)*100);
 }
 
-function clearInputs(){
+/* function clearInputs(){
   $(".js-city").val("");
   $(".js-state").val("");
   $(".js-price").val("");
@@ -103,15 +103,14 @@ function clearInputs(){
   $(".js-sqft").val("");
   $(".js-results").val("");
   $(".js-error-message").html("");
-}
+} */
 
 function watch(){
     $(".js-error-msg").hide();
     $("#wrapper-results").hide();
-    clearInputs();
+    //clearInputs();
     $(".js-form").submit(function(e){
       e.preventDefault();
-      console.log("Watching");
       getListings();
     });
 }
